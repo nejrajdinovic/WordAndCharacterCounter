@@ -57,8 +57,7 @@ public class WordAndCharacterCounter extends JFrame implements ActionListener, W
         String words[]=text.split("\\s");  
         word.setText("Words: "+words.length);
         character.setText("Characters: "+text.length());
-         Toolkit.getDefaultToolkit().beep();  
-       
+         Toolkit.getDefaultToolkit().beep();         
         }
 
     @Override
