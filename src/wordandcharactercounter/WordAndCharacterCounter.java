@@ -14,7 +14,6 @@ public class WordAndCharacterCounter extends JFrame implements ActionListener, W
     Label word, character;
     TextArea area;
 
-
     public WordAndCharacterCounter() {
         count = new Button("Count");
         count.setBounds(100, 400, 100, 30); 
