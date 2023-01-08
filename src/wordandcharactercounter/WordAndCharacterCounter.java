@@ -20,15 +20,12 @@ public class WordAndCharacterCounter extends JFrame implements ActionListener, W
         count.setBackground(Color.gray);
         count.addActionListener(this);
             
-        
         word = new Label("Words: "+ 0); 
         word.setBounds(50,50,100,30);
-        
         
         character = new Label("Characters: " +0);
         character.setBounds(200,50,100,30);
         
-       
         area = new TextArea();
         area.setBounds(20, 100, 300, 300);   
         area.setBackground(Color.lightGray);
@@ -53,8 +50,11 @@ public class WordAndCharacterCounter extends JFrame implements ActionListener, W
     @Override
     public void actionPerformed(ActionEvent e) {
         String text = area.getText();    
-        String words[]=text.split("\\s");  
-        word.setText("Words: "+words.length);
+        String words[]=text.split("\\s"); 
+        if(text.length()==0) 
+            word.setText("Words: 0");
+            else
+            word.setText("Words: "+words.length);
         character.setText("Characters: "+text.length());
          Toolkit.getDefaultToolkit().beep();         
         }
